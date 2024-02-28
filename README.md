@@ -12,11 +12,15 @@ pnpm dev
 npm run dev
 ```
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+See how to load the extension: https://docs.plasmo.com/framework/workflows/dev#loading-the-extension
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
+For further guidance, [visit our Documentation](https://docs.plasmo.com/).
 
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
+## Where to edit?
+
+- The main code is located in src/content.tsx. By default, when you run the extension, it displays a static count button on the LinkedIn website. You need to replace it with your own code.
+
+![count btn on linkedin](count_btn_on_linkedin.png)
 
 ## Making production build
 

@@ -1,8 +1,8 @@
 {
-  "name": "plasmo-tailwind-ts-react-chrome-extension",
-  "displayName": "Plasmo tailwind ts react chrome extension",
+  "name": "plasmo-tailwind-ts-react-chrome-extension-template",
+  "displayName": "LinkedIn AI Reply",
   "version": "0.0.1",
-  "description": "A basic Plasmo extension.",
+  "description": "Plasmo tailwind ts react chrome extension template",
   "author": "GorvGoyl",
   "scripts": {
     "dev": "plasmo dev",
