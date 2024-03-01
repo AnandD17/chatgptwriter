@@ -1,9 +1,7 @@
 import cssText from "data-text:~style.css"
-import type { PlasmoCSConfig, PlasmoGetOverlayAnchor } from "plasmo"
+import type { PlasmoCSConfig } from "plasmo"
 import React, { useEffect, useState, type CSSProperties } from "react"
-import ReactDOM from "react-dom"
 
-import { CountButton } from "~features/count-button"
 import Main from "~features/main"
 
 export const config: PlasmoCSConfig = {
@@ -21,6 +19,7 @@ const PlasmoOverlay = () => {
   const [step, setStep] = useState(0)
 
   useEffect(() => {
+    // Listen for focus events to detect when the user focuses on an input field
     const onFocusIn = (event) => {
       const el = event.target
       if (el == anchorElement) return
@@ -54,14 +53,14 @@ const PlasmoOverlay = () => {
     }
   }, [])
 
-  console.log(step, "step")
-
+  // Base style for the overlay
   const baseStyle: CSSProperties = {
     position: "fixed",
     top: 0,
     left: 0
   }
 
+  // Insert the message into the input field
   const insertMessage = (message: string) => {
     if (anchorElement) {
       if (anchorElement.matches("input, textarea")) {

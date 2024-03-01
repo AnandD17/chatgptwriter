@@ -19,6 +19,7 @@ const WindowInput = ({ insertMessage, setStep }: Props) => {
 
   const [showMessage, setShowMessage] = useState(false)
 
+  // Generate the message only if the prompt is not empty
   const handleGenerate = () => {
     console.log("prompt", prompt)
 
@@ -31,6 +32,7 @@ const WindowInput = ({ insertMessage, setStep }: Props) => {
     setPrompt("")
   }
 
+  // Close the window if the user clicks outside the window
   const handleOutsideClick = (e: any) => {
     setStep(0)
   }
